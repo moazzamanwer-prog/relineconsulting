@@ -1,0 +1,7 @@
+node_modules/
+.env
+ryhme.db
+ryhme.db-journal
+*.log
+verify_*
+test_api.ps1

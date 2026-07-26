@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryhme Consulting | Next-Gen IT Consulting & Digital Solutions</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons (for visual interest) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main StyleSheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">R</span>yhme<span class="logo-sub">Consulting</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="careers.html" class="nav-link">Careers</a>
+            </nav>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-bg-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge">Innovation • Technology • Growth</div>
+                    <h1>Sculpting Digital <span class="gradient-text">Futures</span> For Enterprise</h1>
+                    <p class="hero-subtitle">Ryhme Consulting delivers top-tier bespoke IT consulting. We modernize
+                        operations with cloud web projects, ERP implementation via SAP, and personalized customer paths
+                        via MS Dynamics.</p>
+                    <div class="hero-cta">
+                        <a href="#services" class="btn btn-primary">Our Services <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="abstract-graphic">
+                        <div class="circle circle-1"></div>
+                        <div class="circle circle-2"></div>
+                        <div class="circle circle-3"></div>
+                        <div class="glass-card hero-widget">
+                            <div class="widget-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="widget-body">
+                                <h3>Ryhme.status</h3>
+                                <p><span class="dash-key">Web Apps:</span> <span class="dash-val">Active / Standard
+                                        Suite</span></p>
+                                <p><span class="dash-key">SAP Integrations:</span> <span class="dash-val">Optimized
+                                        V3.4</span></p>
+                                <p><span class="dash-key">MS Dynamics 365:</span> <span class="dash-val">CRM
+                                        Connected</span></p>
+                                <p><span class="dash-key">Global Delivery:</span> <span class="dash-val">24/7/365</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">How We Help</div>
+                    <h2>Our Specialized <span class="gradient-text">Services</span></h2>
+                    <p class="section-desc">Tailored technical solutions backed by deep industry expertise to accelerate
+                        operations, streamline workflows, and spark digital growth.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1: WEB DEVELOPMENT -->
+                    <div class="service-card" data-service="web">
+                        <div class="service-icon icon-web">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>We build production-ready, beautiful, and secure web applications utilizing cutting-edge
+                            technologies. Fully responsive designs, API integrations, and cloud infrastructure
+                            engineered for speed.</p>
+                        <ul class="service-details">
+                            <li><i class="fa-solid fa-check"></i> Single Page Applications & portals</li>
+                            <li><i class="fa-solid fa-check"></i> E-commerce & SaaS platforms</li>
+                            <li><i class="fa-solid fa-check"></i> API & microservice systems</li>
+                        </ul>
+                        <button class="learn-more chatbot-trigger-service" data-query="web_dev">Discuss Scope <i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+
+                    <!-- Service 2: SAP -->
+                    <div class="service-card" data-service="sap">
+                        <div class="service-icon icon-sap">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3>SAP Consulting</h3>
+                        <p>Deploy enterprise-grade ERP setups designed to integrate finance, logistics, human resources,
+                            and supply chain. We assist in migrating to S/4HANA and customizing SAP modules to fit your
+                            strategy.</p>
+                        <ul class="service-details">
+                            <li><i class="fa-solid fa-check"></i> SAP S/4HANA Migrations & Rollouts</li>
+                            <li><i class="fa-solid fa-check"></i> Business Process Optimization</li>
+                            <li><i class="fa-solid fa-check"></i> Custom SAP Integrations & Fiori</li>
+                        </ul>
+                        <button class="learn-more chatbot-trigger-service" data-query="sap">Discuss Scope <i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+
+                    <!-- Service 3: MS DYNAMICS -->
+                    <div class="service-card" data-service="dynamics">
+                        <div class="service-icon icon-dynamics">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <h3>Microsoft Dynamics</h3>
+                        <p>Supercharge client relationships and business efficiency with Dynamics 365. Implement
+                            powerful CRM modules, custom ERP workflows, Power BI analytics, and automated dashboards.
+                        </p>
+                        <ul class="service-details">
+                            <li><i class="fa-solid fa-check"></i> Dynamics 365 CRM & ERP</li>
+                            <li><i class="fa-solid fa-check"></i> Power Automate & Flows design</li>
+                            <li><i class="fa-solid fa-check"></i> Interactive Power BI dashboards</li>
+                        </ul>
+                        <button class="learn-more chatbot-trigger-service" data-query="ms_dynamics">Discuss Scope <i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats / Proof Section -->
+        <section id="about" class="stats-section">
+            <div class="container container-stats">
+                <div class="stats-text">
+                    <div class="section-badge">Why Choose Us</div>
+                    <h2>Engineered for Business <span class="gradient-text">Milestones</span></h2>
+                    <p>At Ryhme Consulting, we combine deep domain knowledge with technical mastery. We don't just
+                        recommend tech stacks - we build digital ecosystems that optimize processes, empower internal
+                        teams, and establish competitive moats.</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-num">99%</span>
+                        <span class="stat-label">Client Retention</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">120+</span>
+                        <span class="stat-label">Experts Globally</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">250+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Get in Touch</div>
+                    <h2>Start Your <span class="gradient-text">Transformation</span></h2>
+                    <p class="section-desc">Have a project in mind or want to learn how we can improve your operations?
+                        Contact our consultants today.</p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <!-- Contact Information -->
+                    <div class="contact-info-card">
+                        <h3>Contact Information</h3>
+                        <p class="contact-sub">Reach out directly to converse with our lead team partners.</p>
+
+                        <div class="info-list">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="info-text">
+                                    <span class="info-label">Phone</span>
+                                    <a href="tel:+18005550199" class="info-val">+1 (800) 555-0199</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="info-text">
+                                    <span class="info-label">Email</span>
+                                    <a href="mailto:contact@ryhmeconsulting.com"
+                                        class="info-val">contact@ryhmeconsulting.com</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="info-text">
+                                    <span class="info-label">Headquarters</span>
+                                    <span class="info-val">500 Innovation Ave, Suite 300, San Francisco, CA 94107</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" class="social-icon" aria-label="LinkedIn"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon" aria-label="Twitter"><i
+                                    class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" class="social-icon" aria-label="Github"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-card">
+                        <h3>Send a Message</h3>
+                        <form id="contact-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-name">Name <span class="required">*</span></label>
+                                    <input type="text" id="form-name" required placeholder="John Doe">
+                                    <span class="error-msg" id="name-error">Please fill in your name.</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-phone">Phone Number</label>
+                                    <input type="tel" id="form-phone" placeholder="+1 (555) 000-0000">
+                                    <span class="error-msg" id="phone-error">Please enter a valid phone number.</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="form-email" required placeholder="john@example.com">
+                                <span class="error-msg" id="email-error">Please enter a valid email address.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Message <span class="required">*</span></label>
+                                <textarea id="form-message" rows="5" required
+                                    placeholder="How can we help your business?"></textarea>
+                                <span class="error-msg" id="message-error">Please enter your message context.</span>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                                <span class="btn-text">Submit Message</span>
+                                <span class="spinner hidden"></span>
+                            </button>
+                        </form>
+                        <div class="success-message hidden" id="form-success">
+                            <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                            <h3>Thank You!</h3>
+                            <p>Your inquiry has been successfully sent. Modernization partners will reach out to you
+                                within 24 hours.</p>
+                            <button class="btn btn-secondary btn-sm" id="reset-form-btn">Send Another Message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Ryhme Consulting. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Floating Widget -->
+    <div class="chatbot-wrapper" id="chatbot-wrapper">
+        <!-- Floating Action Button -->
+        <button class="chatbot-trigger" id="chatbot-trigger" aria-label="Open Chatbot">
+            <span class="notification-badge" id="chat-notification">1</span>
+            <i class="fa-solid fa-comment-dots icon-open"></i>
+            <i class="fa-solid fa-xmark icon-close hidden"></i>
+        </button>
+
+        <!-- Chat Window -->
+        <div class="chat-window hidden" id="chat-window">
+            <!-- Header -->
+            <div class="chat-header">
+                <div class="chat-bot-profile">
+                    <div class="avatar">
+                        <i class="fa-solid fa-robot"></i>
+                        <span class="online-indicator"></span>
+                    </div>
+                    <div class="chat-title">
+                        <h4>Ryhmer Assist</h4>
+                        <span>Online | AI Consultant</span>
+                    </div>
+                </div>
+                <button class="chat-close" id="chat-close" aria-label="Close Chat">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Messages Stream -->
+            <div class="chat-body" id="chat-body">
+                <!-- Initial welcome message from bot -->
+                <div class="message message-bot">
+                    <div class="msg-content">
+                        <p>Hello! I am Ryhmer, your virtual IT agent at Ryhme Consulting. 🚀 How can we assist you
+                            today?</p>
+                        <span class="msg-time">Just now</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Option Chips -->
+            <div class="chat-options-container" id="chat-options-container">
+                <button class="chip-option" data-query="services_overview">💼 Explore Services</button>
+                <button class="chip-option" data-query="about_info">🏢 Learn About Ryhme</button>
+                <button class="chip-option" data-query="consultation">📅 Talk to Consultant</button>
+                <button class="chip-option" data-query="direct_contacts">📞 Call / Email</button>
+            </div>
+
+            <!-- Input area for callback collection -->
+            <div class="chat-input-wrapper hidden" id="chat-input-wrapper">
+                <input type="text" id="chat-input-field" placeholder="Enter callback detail...">
+                <button id="chat-send-btn" aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script File -->
+    <script src="app.js"></script>
+</body>
+
+</html>
