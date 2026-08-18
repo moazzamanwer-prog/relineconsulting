@@ -1,7 +1,7 @@
 {
-  "name": "ryhme-consulting-backend",
+  "name": "reline-consulting-backend",
   "version": "1.0.0",
-  "description": "Backend server for Ryhme Consulting",
+  "description": "Backend server for Reline Consulting",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

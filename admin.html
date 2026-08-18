@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryhme Consulting Admin | Enquiry Management</title>
+    <title>Reline Consulting Admin | Enquiry Management</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -530,7 +530,7 @@
     <div class="dashboard-container" id="dashboard-container">
         <header class="dashboard-header">
             <div>
-                <h1>Ryhme Consulting Dashboard</h1>
+                <h1>Reline Consulting Dashboard</h1>
                 <p style="color: var(--text-muted); font-size: 0.90rem; margin-top: 0.25rem;">Live User Inquiry Control
                     Center</p>
             </div>
@@ -618,7 +618,7 @@
     <script>
         const API_URL = '/api/enquiries';
         const API_APPS = '/api/careers/applications';
-        let adminToken = localStorage.getItem('ryhme_admin_token') || '';
+        let adminToken = localStorage.getItem('reline_admin_token') || '';
         let inquiriesData = [];
         let applicationsData = [];
         let currentTab = 'enquiries';
@@ -668,7 +668,7 @@
         });
 
         logoutBtn.addEventListener('click', () => {
-            localStorage.removeItem('ryhme_admin_token');
+            localStorage.removeItem('reline_admin_token');
             adminToken = '';
             showLogin(true);
         });
@@ -689,7 +689,7 @@
                     const data = await response.json();
                     const token = data.token;
                     adminToken = token;
-                    localStorage.setItem('ryhme_admin_token', token);
+                    localStorage.setItem('reline_admin_token', token);
                     showLogin(false);
                     await syncData();
                 } else {
@@ -697,7 +697,7 @@
                 }
             } catch (err) {
                 authError.style.display = 'block';
-                localStorage.removeItem('ryhme_admin_token');
+                localStorage.removeItem('reline_admin_token');
             }
         }
 
@@ -713,7 +713,7 @@
                     throw new Error('Token expired or invalid');
                 }
             } catch (err) {
-                localStorage.removeItem('ryhme_admin_token');
+                localStorage.removeItem('reline_admin_token');
                 showLogin(true);
             }
         }

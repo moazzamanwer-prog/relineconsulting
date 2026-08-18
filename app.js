@@ -1,4 +1,4 @@
-// Ryhme Consulting Main JavaScript Logic
+// Reline Consulting Main JavaScript Logic
 
 document.addEventListener('DOMContentLoaded', () => {
     // -------------------------------------------------------------
@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
+    // Mobile menu toggle button
     if (mobileToggle && navMenu) {
         mobileToggle.addEventListener('click', () => {
             navMenu.classList.toggle('open');
@@ -18,20 +19,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 icon.className = 'fa-solid fa-bars-staggered';
             }
         });
+    }
 
-        // Close mobile menu on clicking any navigation link
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('open');
-                const icon = mobileToggle.querySelector('i');
-                icon.className = 'fa-solid fa-bars-staggered';
+    // Nav link clicks — always active, regardless of mobile toggle presence
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const targetId = link.getAttribute('href');
 
-                // Set active class
+            // Intercept in-page anchor links and handle scroll manually
+            if (targetId && targetId.startsWith('#')) {
+                e.preventDefault();
+
+                // Close mobile menu if open
+                if (navMenu) navMenu.classList.remove('open');
+                const icon = mobileToggle ? mobileToggle.querySelector('i') : null;
+                if (icon) icon.className = 'fa-solid fa-bars-staggered';
+
+                // Update active class
                 navLinks.forEach(l => l.classList.remove('active'));
                 link.classList.add('active');
-            });
+
+                // scrollIntoView is the most reliable: works from any scroll position
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
         });
-    }
+    });
 
     // Scroll spy active nav highlighting
     window.addEventListener('scroll', () => {
@@ -457,7 +472,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ];
                     break;
                 case 'about_info':
-                    replyText = "<strong>Ryhme Consulting</strong> is a boutique IT delivery firm with offices in San Francisco. Since 2016, we have successfully modernized systems for over 250 enterprise clients globally. We prioritize modular architectures and clear ROI pipelines.";
+                    replyText = "<strong>Reline Consulting</strong> is a boutique IT delivery firm with offices in San Francisco. Since 2016, we have successfully modernized systems for over 250 enterprise clients globally. We prioritize modular architectures and clear ROI pipelines.";
                     responses = [
                         { query: 'services_overview', label: '💼 Explore Services' },
                         { query: 'consultation', label: '📅 Connect With Us' },
@@ -465,7 +480,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ];
                     break;
                 case 'direct_contacts':
-                    replyText = "Certainly! You can contact us anytime via: <br><br>📞 <strong>Phone:</strong> <a href='tel:+18005550199' style='color:#00f2fe;text-decoration:underline;'>+1 (800) 555-0199</a><br>✉️ <strong>Email:</strong> <a href='mailto:contact@ryhmeconsulting.com' style='color:#00f2fe;text-decoration:underline;'>contact@ryhmeconsulting.com</a><br><br>Our team responds to all inbox requests within 2 business hours.";
+                    replyText = "Certainly! You can contact us anytime via: <br><br>📞 <strong>Phone:</strong> <a href='tel:+18005550199' style='color:#00f2fe;text-decoration:underline;'>+1 (800) 555-0199</a><br>✉️ <strong>Email:</strong> <a href='mailto:contact@relineconsulting.com' style='color:#00f2fe;text-decoration:underline;'>contact@relineconsulting.com</a><br><br>Our team responds to all inbox requests within 2 business hours.";
                     responses = [
                         { query: 'consultation', label: '📅 Let Us Call You' },
                         { query: 'main_menu', label: '🔙 Main Menu' }
@@ -486,7 +501,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     replyText = "How can we assist you today? Select one of the paths below:";
                     responses = [
                         { query: 'services_overview', label: '💼 Explore Services' },
-                        { query: 'about_info', label: '🏢 Learn About Ryhme' },
+                        { query: 'about_info', label: '🏢 Learn About Reline' },
                         { query: 'consultation', label: '📅 Talk to Consultant' },
                         { query: 'direct_contacts', label: '📞 Call / Email' }
                     ];
@@ -538,7 +553,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 loader.remove();
 
                 // Format dynamic response acknowledging details
-                let confirmMsg = "Excellent! I have recorded your details. A senior architect from Ryhme Consulting will reach out to you shortly.";
+                let confirmMsg = "Excellent! I have recorded your details. A senior architect from Reline Consulting will reach out to you shortly.";
 
                 if (isEmail) {
                     confirmMsg = `Thank you for sharing your email <strong>${escapeHTML(text)}</strong>. A senior partner will reach out to schedule our session shortly.`;
