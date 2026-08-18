@@ -1,7 +1,9 @@
 node_modules/
 .env
+.env.*
 reline.db
 reline.db-journal
+ryhme.db
 *.log
 verify_*
 test_api.ps1

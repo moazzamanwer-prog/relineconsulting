@@ -1,3 +1,7 @@
+const nodeEnv = process.env.NODE_ENV || 'development';
+// load env-specific first, so they take precedence
+require('dotenv').config({ path: `.env.${nodeEnv}` });
+// load default .env for fallback variables
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
