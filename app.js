@@ -480,7 +480,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ];
                     break;
                 case 'direct_contacts':
-                    replyText = "Certainly! You can contact us anytime via: <br><br>📞 <strong>Phone:</strong> <a href='tel:+18005550199' style='color:#00f2fe;text-decoration:underline;'>+1 (800) 555-0199</a><br>✉️ <strong>Email:</strong> <a href='mailto:contact@relineconsulting.com' style='color:#00f2fe;text-decoration:underline;'>contact@relineconsulting.com</a><br><br>Our team responds to all inbox requests within 2 business hours.";
+                    replyText = "Certainly! You can contact us anytime via: <br><br>📞 <strong>Phone:</strong> <a href='tel:+18005550199' style='color:#00f2fe;text-decoration:underline;'>+1 (800) 555-0199</a><br>✉️ <strong>Email:</strong> <a href='mailto:support@relineconsulting.com' style='color:#00f2fe;text-decoration:underline;'>support@relineconsulting.com</a><br><br>Our team responds to all inbox requests within 2 business hours.";
                     responses = [
                         { query: 'consultation', label: '📅 Let Us Call You' },
                         { query: 'main_menu', label: '🔙 Main Menu' }
