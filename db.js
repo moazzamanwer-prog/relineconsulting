@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
 
+const dns = require('dns');
+dns.setServers(['8.8.8.8', '8.8.4.4']);
+
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/reline';
 
 mongoose.connect(MONGODB_URI)
